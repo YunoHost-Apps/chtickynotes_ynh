@@ -1,0 +1,31 @@
+{
+    "name": "ChtickyNotes",
+    "id": "chtickynotes",
+    "description": {
+        "en": "Generic sticky notes for all purpose",
+        "fr": "Des post-its génériques à tout faire"
+    },
+    "license": "MIT",
+    "developer": {
+        "name": "chtixof"
+    },
+    "multi_instance": "false",
+    "arguments": {
+        "install" : [            {
+                "name": "domain",
+                "ask": {
+                    "en": "Choose a domain for ChtickyNotes",
+                    "en": "Choisissez un domaine pour ChtickyNotes"
+                },
+                "example": "domain.org"
+            },{
+                "name": "path",
+                "ask": {
+                    "en": "Choose a path for ChtickyNotes",
+                    "en": "Choisissez un chemin pour ChtickyNotes"
+                },
+                "example": "/chtickynotes",
+                "default": "/chtickynotes"
+            } ]
+    }
+}

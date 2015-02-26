@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<head>           
+  <meta charset="utf-8">           
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">           
+  <title>ChtickyNotes   
+  </title>           
+  <meta name="description" content="">           
+  <meta name="viewport" content="width=device-width">                    
+  <link rel="stylesheet" href="libs/jquery-ui-1.10.0.custom.css">           
+  <link rel="stylesheet" href="libs/bootstrap.min.css">		   
+  <link rel="stylesheet" href="libs/bootstrap-responsive.min.css">           
+  <link rel="stylesheet" href="libs/jquery.minicolors.css">		   
+  <link rel="stylesheet" href="plugin/jquery.postitall.css">		 		   
+  <link rel="stylesheet" href="libs/main.css">   
+<style>
+body {
+background: #41444f;
+color: #bbb;
+}
+#chtimenu {
+margin-left: 10px;
+}
+#chtimenu a, .chme a {
+color: #fff;
+}
+#chtimenu a:hover {
+color: #fff;
+}
+#saved {
+position:absolute;
+}
+#saveallnotes {
+position:absolute;
+background: #41444f;
+}
+#chtoption {
+	background-image: url(data:image/gif;base64,R0lGODlhDQANALsAAMXFxbe3t76+vtvb2729vbi4uLy8vMHBwbm5ueHh4dra2tPT07e4t9TU1ODg4JmZmSH5BAEAAA8ALAAAAAANAA0AAAQvsIVJaxmIiM25OQMgjiSQPGiqruy6VHBwZV39hWV5tnz/vDEKQ1HQ1DwHRa7kiAAAOw==);
+  position:absolute;
+  top:15px;
+  right:15px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.chme {
+  position: absolute;
+  display: none;
+  z-index: 100000;
+  right: 15px;
+}
+#chtoptmenu {
+  width: 275px;
+  height: 40px;
+  top: 15px;
+}
+#chlist {
+  width: 400px;
+  height: 40px;
+  top: 45px;
+}
+.chme label{
+display: inline;
+}
+#chtoptmenu ul {
+  top: 30px;
+  width: 275px;
+}
+#chlist ul {
+  width: 400px;
+}
+.chme ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+}
+.chme ul li { 
+  font: 14px;
+  margin-right: -4px;
+  position: relative;
+  padding: 5px 20px;
+  cursor: pointer;
+  background: #555; 
+  display: block; 
+  color: #fff;
+  }
+.chme ul li:hover { background: #666; }
+.center { text-align: center; }
+.float-left { float: left; }
+.float-right { float: right; }
+.vertical-bottom { vertical-align: bottom; }
+.vertical-middle { vertical-align: middle; }
+.vertical-top { vertical-align: top; }
+.clear { clear: both; }
+.red { color: red; }
+.red a { color: red; font-weight: bold; text-decoration: none; }
+.red a:hover { text-decoration: underline; }
+
+
+</style>
+</head>   
+<body>	   
+  <!--[if lt IE 7]>
+    		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    	<![endif]-->        
+          <div id="chtimenu">  
+            <a id="addanote"  href="javascript:void(0)">Add a note</a> &nbsp; &nbsp;
+            <span id="saved">(saved)</span>			           
+            <a id="saveallnotes"  href="javascript:void(0)">Save all notes</a>
+          </div>					           
+          <div id="addanote_result">          
+          </div>			
+          <div id="chtoption">
+          </div>
+          <div id="chtoptmenu" class="chme">
+            <ul>
+              <li id="chboard">Change board</li>
+              <li><a href="javascript:alert('tbd')">Background color</a></li>
+              <li><a href="javascript:alert('tbd')">Title</a></li>
+              <li><a href="javascript:alert('tbd')">This board is shared. Make it private?</a></li>
+              <li><a href="javascript:alert('tbd')">Delete this board</a></li>
+            </ul>
+          </div>          
+          <div id="chlist" class="chme">
+            <ul>
+              <li>First Board (shared)</li>
+              <li>Second Board (shared)</li>
+              <li>&lt;New board&gt;</a></li>
+            </ul>
+          </div>          
+          
+          
+          	         
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 	 
+<script>window.jQuery || document.write('<script src="libs/jquery-1.9.1.min.js"><\/script>')</script> 	 	 
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>  	 
+<script>window.jQuery || document.write('<script src="libs/jquery-ui-1.10.1.min.js"><\/script>')</script>  	 	 
+<script src="libs/bootstrap.min.js"></script>  	 	 
+<script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=sunburst&amp;lang=css" defer="defer"></script>  	 
+<script src="libs/jquery.minicolors.js"></script>  	 
+<script src="plugin/jquery.postitall.js"></script>  	 	 
+<script src="libs/main.js"></script>  	 
+<script>
+
+  function saveallnotes(){}
+   
+  //global reqini for ajax
+  var reqini = new XMLHttpRequest();
+
+  //here we go
+	$(document).ready(function() {
+		
+		//Minicolors for the form
+		$('.minicolors').minicolors();
+		
+		//Add a note
+		$('#addanote').click(function() {
+			$('#addanote_result').postitall();
+		});
+		
+  	// set function to save all notes in the z-index order
+  	saveallnotes=function() {
+      var allnotes=[];
+      var req = new XMLHttpRequest();
+      $('.PIApostit').each(function() {
+        var thisone=$(this).postitall('options');
+        allnotes.push({	
+          "date": thisone.date,
+          "showdate": thisone.showdate,
+          "title": thisone.title,
+        	"backgroundcolor": thisone.backgroundcolor,
+        	"textcolor": thisone.textcolor,
+        	"posX": thisone.posX,
+        	"posY": thisone.posY,
+        	"height": thisone.height,
+        	"width": thisone.width,
+        	"description": thisone.description,
+        	"zindex": parseInt($(this).css('z-index'))
+        });
+      });
+      allnotes.sort(function (a,b) {
+        if (a.zindex < b.zindex)
+          return -1;
+        if (a.zindex > b.zindex)
+          return 1;
+        return 0;
+      });
+      
+      allnotes.forEach(function(thisone){
+        delete thisone.zindex;
+      });
+
+        text=JSON.stringify(allnotes);
+        //ajax out
+        req.open("POST", "fav.php", true);
+        req.setRequestHeader("Content-type", "application/json");
+        req.onreadystatechange = function() 
+        { 
+           if (req.readyState == 4) { 
+               $('#saveallnotes').hide(); //=(saved)
+           }
+        }
+        req.send(text);
+     }
+
+		$('#saveallnotes').click(saveallnotes);  // set function to link
+
+ 		$('#chtoption').click(function () {      // set function to menu for options
+                $('#chtoptmenu').show();
+    });  
+
+    $('.chme').mouseleave(function(){
+      $(this).hide();
+    });
+
+ 		$('#chboard').click(function () { 
+                $('#chlist').show();
+    });  
+
+
+      
+    // ajax in
+    reqini.open("GET", "allnotes.json", true); 
+    reqini.onreadystatechange = function() 
+    { 
+       if (reqini.readyState == 4) { 
+          text=reqini.responseText;
+          try {
+              JSON.parse(text);
+          } catch (e) {
+              text = '[]'; 
+          }
+          JSON.parse(text).forEach(function(note){
+      			$('#addanote_result').postitall(note);
+          });
+          $('.PIApostit').postitall('isittosave','#saveallnotes'); // prevents to save on load! and sets id to hide/show
+          $('#saveallnotes').hide(); //=(saved)
+        }
+    }
+    reqini.send(null);
+	});
+	// timer to save every 10 s. if required
+  window.setInterval(function () {
+    if($('.PIApostit').postitall('isittosave')){saveallnotes()}
+  }, 10000);	
+	</script>     
+</body>
+</html>
