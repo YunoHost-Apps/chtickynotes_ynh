@@ -2,6 +2,12 @@
 
 chtickynotes_ynh is packaged to be installed on a [Yunohost](https://yunohost.org) server.
 
+**This app is no longer maintained and need a new packager to give it some love :)**
+
+Status: *not working*.
+
+---
+
 chtickynotes_ynh is a "simple post-it" application. Its main features are:
 - notes movable and resizable
 - edit note by just typing on it (or CTRL-V to paste chunks of HTML)
