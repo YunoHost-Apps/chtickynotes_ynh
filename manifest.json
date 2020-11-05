@@ -1,18 +1,32 @@
 {
     "name": "ChtickyNotes",
     "id": "chtickynotes",
+    "packaging_format": 1,
     "description": {
         "en": "Generic sticky notes for all purpose",
         "fr": "Des post-its génériques à tout faire"
     },
+    "version": "1.0~ynh1",
+    "url": "https://github.com/YunoHost-Apps/chtickynotes_ynh/",
     "license": "MIT",
     "developer": {
         "name": "chtixof"
     },
-    "multi_instance": "false",
+    "maintainer": {
+        "name": "YunoHost Contributors",
+        "email": "apps@yunohost.org"
+    },
+    "requirements": {
+        "yunohost": ">= 3.8.1"
+    },
+    "multi_instance": false,
+    "services": [
+        "nginx"
+    ],
     "arguments": {
         "install" : [            {
                 "name": "domain",
+                "type": "domain",
                 "ask": {
                     "en": "Choose a domain for ChtickyNotes",
                     "fr": "Choisissez un domaine pour ChtickyNotes"
@@ -20,12 +34,23 @@
                 "example": "domain.org"
             },{
                 "name": "path",
+                "type": "path",
                 "ask": {
                     "en": "Choose a path for ChtickyNotes",
                     "fr": "Choisissez un chemin pour ChtickyNotes"
                 },
                 "example": "/chtickynotes",
                 "default": "/chtickynotes"
-            } ]
+            },
+                        {
+                "name": "is_public",
+                "type": "boolean",
+                "ask": {
+                    "en": "Is it a public application?",
+                    "fr": "Est-ce une application publique ?"
+                },
+                "default": true
+            }
+        ]
     }
 }
