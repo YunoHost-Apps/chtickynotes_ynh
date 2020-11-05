@@ -1,16 +1,16 @@
-# Chtickynotes for YunoHost
+# ChtickyNotes for YunoHost
 
 [![Integration level](https://dash.yunohost.org/integration/chtickynotes.svg)](https://dash.yunohost.org/appci/app/chtickynotes) ![](https://ci-apps.yunohost.org/ci/badges/chtickynotes.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/chtickynotes.maintain.svg)  
-[![Install chtickynotes with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=chtickynotes)
+[![Install ChtickyNotes with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=chtickynotes)
 
 *[Lire ce readme en français.](./README_fr.md)*
 
-> *This package allows you to install chtickynotes quickly and simply on a YunoHost server.  
+> *This package allows you to install ChtickyNotes quickly and simply on a YunoHost server.  
 If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/install) to learn how to install it.*
 
 ## Overview
-chtickynotes_ynh core is based on [Post It All!](https://github.com/txusko/PostItAll).
-chtickynotes_ynh is a "simple post-it" application. Its main features are:
+ChtickyNotes core is based on [Post It All!](https://github.com/txusko/PostItAll).
+ChtickyNotes is a "simple post-it" application. Its main features are:
 - notes movable and resizable
 - edit note by just typing on it (or CTRL-V to paste chunks of HTML)
 - menu on each note to change its color, and so on
@@ -24,14 +24,6 @@ chtickynotes_ynh is a "simple post-it" application. Its main features are:
 
 ![](https://lh4.googleusercontent.com/-ATC-XA5iVsc/VM06cI3ClLI/AAAAAAAACHo/uBhDViaSBRg/s800/chtickynotes.gif)
 
-## Demo
-
-* [Official demo](Link to a demo site for this app.)
-
-## Configuration
-
-How to configure this app: From an admin panel, a plain file with SSH, or any other way.
-
 ## Documentation
 
  * Official documentation: Link to the official documentation of this app
@@ -41,8 +33,8 @@ How to configure this app: From an admin panel, a plain file with SSH, or any ot
 
 #### Multi-user support
 
-Are LDAP and HTTP auth supported?
-Can the app be used by multiple users?
+* Are LDAP and HTTP auth supported?
+* Can the app be used by multiple users?
 
 #### Supported architectures
 
