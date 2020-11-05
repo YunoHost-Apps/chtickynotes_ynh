@@ -1,15 +1,42 @@
 #!/bin/bash
-app=chtickynotes
 
-# Retrieve arguments
-domain=$(sudo yunohost app setting $app domain)
+#=================================================
+# GENERIC START
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
 
-# Remove sources
-sudo rm -rf /var/www/$app
+source _common.sh
+source /usr/share/yunohost/helpers
 
-# Remove configuration files
-sudo rm -f /etc/nginx/conf.d/$domain.d/$app.conf
+#=================================================
+# LOAD SETTINGS
+#=================================================
+ynh_script_progression --message="Loading installation settings..." --weight=1
 
-# Restart services
-sudo service nginx reload
-sudo yunohost app ssowatconf
+app=$YNH_APP_INSTANCE_NAME
+
+domain=$(ynh_app_setting_get --app=$app --key=domain)
+final_path=$(ynh_app_setting_get --app=$app --key=final_path)
+
+#=================================================
+# REMOVE APP MAIN DIR
+#=================================================
+ynh_script_progression --message="Removing app main directory..." --weight=2
+
+# Remove the app directory securely
+ynh_secure_remove --file="$final_path"
+
+#=================================================
+# REMOVE NGINX CONFIGURATION
+#=================================================
+ynh_script_progression --message="Removing NGINX web server configuration..." --weight=1
+
+# Remove the dedicated NGINX config
+ynh_remove_nginx_config
+
+#=================================================
+# END OF SCRIPT
+#=================================================
+
+ynh_script_progression --message="Removal of $app completed" --last
