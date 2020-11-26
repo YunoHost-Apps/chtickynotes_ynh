@@ -71,11 +71,10 @@ ynh_system_user_create --username=$app
 #=================================================
 # PHP-FPM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Upgrading PHP-FPM configuration..."
+ynh_script_progression --message="Configuring PHP-FPM..."
 
-# Create a dedicated php-fpm config
-ynh_add_fpm_config
-
+# Create a dedicated PHP-FPM config
+ynh_add_fpm_config --usage=low --footprint=low
 
 #=================================================
 # SECURE FILES AND DIRECTORIES
