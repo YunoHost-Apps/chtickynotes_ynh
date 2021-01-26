@@ -1,7 +1,7 @@
 # ChtickyNotes pour YunoHost
 
 [![Integration level](https://dash.yunohost.org/integration/chtickynotes.svg)](https://dash.yunohost.org/appci/app/chtickynotes) ![](https://ci-apps.yunohost.org/ci/badges/chtickynotes.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/chtickynotes.maintain.svg)  
-[![Install ChtickyNotes with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=chtickynotes)
+[![Install ChtickyNotes with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=chtickynotes)
 
 *[Read this readme in english.](./README.md)* 
 
