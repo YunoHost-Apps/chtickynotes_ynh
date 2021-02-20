@@ -30,7 +30,7 @@ ynh_secure_remove --file="$final_path"
 #=================================================
 # REMOVE PHP-FPM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Removing php-fpm configuration..." --weight=1
+ynh_script_progression --message="Removing PHP-FPM configuration..." --weight=1
 
 # Remove the dedicated php-fpm config
 ynh_remove_fpm_config
