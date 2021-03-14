@@ -13,8 +13,8 @@
         "name": "chtixof"
     },
     "maintainer": {
-        "name": "YunoHost Contributors",
-        "email": "apps@yunohost.org"
+        "name": "",
+        "email": ""
     },
     "requirements": {
         "yunohost": ">= 3.8.1"
