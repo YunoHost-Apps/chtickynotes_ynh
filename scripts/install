@@ -87,16 +87,20 @@ ynh_add_fpm_config --usage=low --footprint=low
 # SECURE FILES AND DIRECTORIES
 #=================================================
 
-# Set right permissions for curl install
-chown -R $app: $final_path
+chmod 750 "$final_path"
+chmod -R o-rwx "$final_path"
+chown -R $app:www-data "$final_path"
 
 #=================================================
 # SETUP SSOWAT
 #=================================================
 ynh_script_progression --message="Configuring permissions..." --weight=1
 
-# Make app public if necessary or protect it
-[ $is_public -eq 0 ] || ynh_permission_update --permission="main" --add="visitors"
+# Make app public if necessary
+if [ $is_public -eq 1 ]
+then
+	ynh_permission_update --permission="main" --add="visitors"
+fi
 
 #=================================================
 # RELOAD NGINX
