@@ -38,8 +38,8 @@ ChtickyNotes is a "simple post-it" application. Its main features are:
 
 #### Supported architectures
 
-* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/chtickynotes%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/chtickynotes/)
-* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/chtickynotes%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/chtickynotes/)
+* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/chtickynotes.svg)](https://ci-apps.yunohost.org/ci/apps/chtickynotes/)
+* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/chtickynotes.svg)](https://ci-apps-arm.yunohost.org/ci/apps/chtickynotes/)
 
 ## Limitations
 
