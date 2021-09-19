@@ -4,7 +4,7 @@
     "packaging_format": 1,
     "description": {
         "en": "Generic sticky notes for all purpose",
-        "fr": "Des post-its génériques à tout faire"
+        "fr": "Post-its génériques à tout faire"
     },
     "version": "1.0~ynh3",
     "url": "https://github.com/YunoHost-Apps/chtickynotes_ynh/",
@@ -26,8 +26,7 @@
     "arguments": {
         "install" : [            {
                 "name": "domain",
-                "type": "domain",
-                "example": "domain.org"
+                "type": "domain"
             },{
                 "name": "path",
                 "type": "path",
