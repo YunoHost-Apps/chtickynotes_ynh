@@ -6,10 +6,8 @@
 # IMPORT GENERIC HELPERS
 #=================================================
 
+source _common.sh
 source /usr/share/yunohost/helpers
-
-# Stop script if errors
-ynh_abort_if_errors
 
 #=================================================
 # RETRIEVE ARGUMENTS
@@ -26,23 +24,24 @@ app=$YNH_APP_INSTANCE_NAME
 #=================================================
 # LOAD SETTINGS
 #=================================================
-ynh_script_progression --message="Loading installation settings..." --weight=1
+ynh_script_progression --message="Loading installation settings..."
 
 # Needed for helper "ynh_add_nginx_config"
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
 
 #=================================================
-# BACKUP BEFORE UPGRADE THEN ACTIVE TRAP
+# BACKUP BEFORE CHANGE URL THEN ACTIVE TRAP
 #=================================================
-ynh_script_progression --message="Backing up ChtickyNotes before changing its URL (may take a while)..." --weight=2
+ynh_script_progression --message="Backing up the app before changing its URL (may take a while)..."
 
 # Backup the current version of the app
 ynh_backup_before_upgrade
 ynh_clean_setup () {
+	ynh_clean_check_starting
 	# Remove the new domain config file, the remove script won't do it as it doesn't know yet its location.
 	ynh_secure_remove --file="/etc/nginx/conf.d/$new_domain.d/$app.conf"
 
-	# restore it if the upgrade fails
+	# Restore it if the upgrade fails
 	ynh_restore_upgradebackup
 }
 # Exit if an error occurs during the execution of the script
@@ -64,6 +63,8 @@ then
 	change_path=1
 fi
 
+#=================================================
+# STANDARD MODIFICATIONS
 #=================================================
 # MODIFY URL IN NGINX CONF
 #=================================================
@@ -104,4 +105,4 @@ ynh_systemd_action --service_name=nginx --action=reload
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Change of URL completed for ChtickyNotes" --last
+ynh_script_progression --message="Change of URL completed for $app" --last
