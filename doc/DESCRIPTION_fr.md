@@ -1,6 +1,7 @@
-## Overview
-Le noyau de ChtickyNotes est basé sur [Post It All!](Https://github.com/txusko/PostItAll).
-ChtickyNotes est une application "post-it". Ses principales caractéristiques sont :
+ChtickyNotes est une application "post-it" basé sur [Post It All!](Https://github.com/txusko/PostItAll).
+
+
+## Features:
 - notes mobiles et redimensionnables
 - éditer la note en tapant simplement dessus (ou CTRL-V pour coller du code HTML)
 - menu sur chaque note pour changer sa couleur...
