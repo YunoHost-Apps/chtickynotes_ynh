@@ -6,7 +6,7 @@
         "en": "Generic sticky notes for all purpose",
         "fr": "Post-its génériques à tout faire"
     },
-    "version": "1.0~ynh4",
+    "version": "1.0~ynh5",
     "url": "https://github.com/YunoHost-Apps/chtickynotes_ynh/",
     "upstream": {
         "license": "MIT",
