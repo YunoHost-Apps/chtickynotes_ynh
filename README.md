@@ -26,7 +26,7 @@ ChtickyNotes is a "simple post-it" based on [Post It All!](https://github.com/tx
 - storage on the server (not on the browser local storage)
 
 
-**Shipped version:** 1.0~ynh4
+**Shipped version:** 1.0~ynh5
 
 ## Screenshots
 
