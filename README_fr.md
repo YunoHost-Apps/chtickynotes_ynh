@@ -26,7 +26,7 @@ ChtickyNotes est une application "post-it" basé sur [Post It All!](Https://gith
 - stockage sur le serveur (pas de stockage local dans le navigateur)
 
 
-**Version incluse :** 1.0~ynh4
+**Version incluse :** 1.0~ynh5
 
 ## Captures d’écran
 
