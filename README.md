@@ -5,7 +5,8 @@ It shall NOT be edited by hand.
 
 # ChtickyNotes for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/chtickynotes.svg)](https://dash.yunohost.org/appci/app/chtickynotes) ![Working status](https://ci-apps.yunohost.org/ci/badges/chtickynotes.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/chtickynotes.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/chtickynotes.svg)](https://dash.yunohost.org/appci/app/chtickynotes) ![Working status](https://ci-apps.yunohost.org/ci/badges/chtickynotes.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/chtickynotes.maintain.svg)
+
 [![Install ChtickyNotes with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=chtickynotes)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -17,7 +18,8 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ChtickyNotes is a "simple post-it" based on [Post It All!](https://github.com/txusko/PostItAll).
 
-##Features:
+## Features
+
 - notes movable and resizable
 - edit note by just typing on it (or CTRL-V to paste chunks of HTML)
 - menu on each note to change its color, and so on
@@ -39,7 +41,6 @@ ChtickyNotes is a "simple post-it" based on [Post It All!](https://github.com/tx
 ## Documentation and resources
 
 * Upstream app code repository: <https://github.com/YunoHost-Apps/chtickynotes_ynh/>
-* YunoHost documentation for this app: <https://yunohost.org/app_chtickynotes>
 * Report a bug: <https://github.com/YunoHost-Apps/chtickynotes_ynh/issues>
 
 ## Developer info
