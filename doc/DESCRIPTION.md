@@ -1,6 +1,7 @@
 ChtickyNotes is a "simple post-it" based on [Post It All!](https://github.com/txusko/PostItAll).
 
-##Features:
+## Features
+
 - notes movable and resizable
 - edit note by just typing on it (or CTRL-V to paste chunks of HTML)
 - menu on each note to change its color, and so on
