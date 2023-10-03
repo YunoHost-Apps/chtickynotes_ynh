@@ -16,7 +16,7 @@ license = "MIT"
 code = "https://github.com/YunoHost-Apps/chtickynotes_ynh/"
 
 [integration]
-yunohost = ">= 11.0.9"
+yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = false
 ldap = false # TODO:
@@ -47,6 +47,5 @@ ram.runtime = "10M"
 
     [resources.apt]
     packages = [
-        "php7.4",
         "php7.4-fpm",
     ]
