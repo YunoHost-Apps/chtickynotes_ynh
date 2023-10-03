@@ -3,5 +3,3 @@
 test_format = 1.0
 
 [default]
-
-    test_upgrade_from.5ea5611d28a8330a7d9127371d60f28083b0a0fb.name = "old version"
