@@ -41,6 +41,7 @@ ChtickyNotes is a "simple post-it" based on [Post It All!](https://github.com/tx
 ## Documentation and resources
 
 * Upstream app code repository: <https://github.com/YunoHost-Apps/chtickynotes_ynh/>
+* YunoHost Store: <https://apps.yunohost.org/app/chtickynotes>
 * Report a bug: <https://github.com/YunoHost-Apps/chtickynotes_ynh/issues>
 
 ## Developer info
