@@ -7,7 +7,7 @@ name = "ChtickyNotes"
 description.en = "Generic sticky notes for all purpose"
 description.fr = "Post-its génériques à tout faire"
 
-version = "1.0~ynh5"
+version = "1.0~ynh6"
 
 maintainers = []
 
