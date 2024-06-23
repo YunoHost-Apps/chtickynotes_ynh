@@ -3,7 +3,7 @@
 请勿手动编辑。
 -->
 
-# YunoHost 的 ChtickyNotes
+# YunoHost 上的 ChtickyNotes
 
 [![集成程度](https://dash.yunohost.org/integration/chtickynotes.svg)](https://dash.yunohost.org/appci/app/chtickynotes) ![工作状态](https://ci-apps.yunohost.org/ci/badges/chtickynotes.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/chtickynotes.maintain.svg)
 

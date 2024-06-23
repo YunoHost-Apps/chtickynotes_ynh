@@ -34,7 +34,7 @@ ChtickyNotes is a "simple post-it" based on [Post It All!](https://github.com/tx
 
 ![Captura de pantalla de ChtickyNotes](./doc/screenshots/chtickynotes.gif)
 
-## :red_circle: Caraterísticas cuestionables
+## :red_circle: Debes considerar
 
 - **Upstream not maintained**: This software is not maintained anymore. Expect it to break down over time, be exposed to unfixed security breaches, etc.
 
